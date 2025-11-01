@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MERN → Engineer: HTML & CSS Learning Tree</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#60a5fa;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:linear-gradient(180deg,#071028 0%, #081426 100%); color:#e6eef8; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:1100px;margin:36px auto;padding:28px}
+    header{display:flex;gap:18px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;font-weight:700;color:#012;box-shadow:0 6px 18px rgba(2,6,23,.6)}
+    h1{margin:0;font-size:22px}
+    p.lead{color:var(--muted);margin:6px 0 20px}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 8px 30px rgba(2,6,23,.6);border:1px solid rgba(255,255,255,0.03)}
+
+    /* Tree */
+    .tree{display:flex;flex-direction:column;gap:12px}
+    details{background:var(--glass);border-radius:10px;padding:12px 14px;border:1px solid rgba(255,255,255,.02)}
+    summary{list-style:none;cursor:pointer;outline:none;display:flex;align-items:center;gap:10px}
+    summary::-webkit-details-marker{display:none}
+    .node-title{font-weight:600}
+    .node-desc{color:var(--muted);font-size:13px;margin-top:6px}
+    ul.links{margin:10px 0 0;padding-left:18px}
+    ul.links li{margin:8px 0}
+    a.link{color:var(--accent);text-decoration:none;font-weight:600}
+    a.link:hover{text-decoration:underline}
+
+    /* Right column */
+    .aside h3{margin:0 0 8px}
+    .pill{display:inline-block;background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;margin:6px 6px 6px 0;color:var(--muted);font-weight:600;font-size:13px}
+
+    footer{margin-top:20px;color:var(--muted);font-size:13px}
+
+    @media(max-width:880px){.grid{grid-template-columns:1fr;}.aside{order:2}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">ME</div>
+      <div>
+        <h1>MERN → Engineer — Learning Tree (HTML &amp; CSS focused)</h1>
+        <p class="lead">A single-page roadmap that turns your MERN knowledge into production-ready engineering skills. Click a node to expand resources.</p>
+      </div>
+    </header>
+
+    <div class="grid" style="margin-top:18px">
+      <main class="card">
+        <section class="tree">
+
+          <details open>
+            <summary>
+              <div class="node-title">1. HTML &amp; CSS Fundamentals</div>
+            </summary>
+            <div class="node-desc">Solid web foundations — required before anything else.</div>
+            <ul class="links">
+              <li><a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN — HTML Reference &amp; Tutorials</a> — authoritative reference and guides.</li>
+              <li><a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Tutorials" target="_blank">MDN — CSS Tutorials</a> — from basics to advanced techniques.</li>
+              <li><a class="link" href="https://www.freecodecamp.org/learn/responsive-web-design" target="_blank">freeCodeCamp — Responsive Web Design</a> — interactive exercises &amp; projects.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <div class="node-title">2. Deepen MERN (beyond CRUD)</div>
+            </summary>
+            <div class="node-desc">Add production features to your apps.</div>
+            <ul class="links">
+              <li><a class="link" href="https://react.dev/" target="_blank">React — Official Docs</a> — component patterns &amp; hooks.</li>
+              <li><a class="link" href="https://expressjs.com/" target="_blank">Express — Official Docs</a> — API design and middleware.</li>
+              <li><a class="link" href="https://nodejs.org/en/docs/" target="_blank">Node.js — Docs</a> — runtime &amp; core APIs.</li>
+              <li><a class="link" href="https://socket.io/" target="_blank">Socket.IO — Real-time</a> — websockets &amp; live features.</li>
+              <li><a class="link" href="https://stripe.com/docs" target="_blank">Stripe — Payments</a> — payments integration guide.</li>
+              <li><a class="link" href="https://www.npmjs.com/package/multer" target="_blank">Multer — File uploads</a> — express file handling.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <div class="node-title">3. Backend Engineering</div>
+            </summary>
+            <div class="node-desc">Design robust, scalable servers and databases.</div>
+            <ul class="links">
+              <li><a class="link" href="https://www.mongodb.com/docs/" target="_blank">MongoDB Docs</a> — indexing, aggregations, performance.</li>
+              <li><a class="link" href="https://www.postgresql.org/docs/" target="_blank">PostgreSQL Docs</a> — when to use SQL &amp; relational design.</li>
+              <li><a class="link" href="https://www.typescriptlang.org/docs/" target="_blank">TypeScript — Official Docs</a> — bring types to JS projects.</li>
+              <li><a class="link" href="https://jestjs.io/" target="_blank">Jest — Testing</a> — unit &amp; integration testing.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <div class="node-title">4. System Design</div>
+            </summary>
+            <div class="node-desc">Learn to architect systems that scale.</div>
+            <ul class="links">
+              <li><a class="link" href="https://github.com/donnemartin/system-design-primer" target="_blank">System Design Primer — GitHub</a> — a practical guide to designing large-scale systems.</li>
+              <li><a class="link" href="https://aws.amazon.com/getting-started/" target="_blank">AWS — Getting Started</a> — cloud building blocks for system design.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <div class="node-title">5. DevOps &amp; Cloud</div>
+            </summary>
+            <div class="node-desc">Shipping, monitoring and running production apps.</div>
+            <ul class="links">
+              <li><a class="link" href="https://docs.docker.com/get-started/" target="_blank">Docker — Get Started</a> — containerize your apps.</li>
+              <li><a class="link" href="https://docs.aws.amazon.com/" target="_blank">AWS Docs</a> — compute, storage, serverless.</li>
+              <li><a class="link" href="https://docs.github.com/en/actions" target="_blank">GitHub Actions — CI/CD</a> — automate builds &amp; deployments.</li>
+              <li><a class="link" href="https://prometheus.io/docs/" target="_blank">Prometheus — Monitoring</a> — metrics &amp; alerting.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <div class="node-title">6. Expand Your Toolbox</div>
+            </summary>
+            <div class="node-desc">Other stacks, languages &amp; useful frameworks.</div>
+            <ul class="links">
+              <li><a class="link" href="https://nextjs.org/docs" target="_blank">Next.js — Fullstack React</a></li>
+              <li><a class="link" href="https://nestjs.com/" target="_blank">NestJS — Opinionated Node framework</a></li>
+              <li><a class="link" href="https://www.typescriptlang.org/" target="_blank">TypeScript — again (great for large codebases)</a></li>
+              <li><a class="link" href="https://www.python.org/" target="_blank">Python — FastAPI / Django</a></li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <div class="node-title">7. Data Structures &amp; Algorithms</div>
+            </summary>
+            <div class="node-desc">Solve problems efficiently and prepare for interviews.</div>
+            <ul class="links">
+              <li><a class="link" href="https://leetcode.com/" target="_blank">LeetCode — Practice problems</a></li>
+              <li><a class="link" href="https://visualgo.net/en" target="_blank">VisuAlgo — Visualize algorithms &amp; DS</a></li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <div class="node-title">8. Contribute &amp; Build</div>
+            </summary>
+            <div class="node-desc">Real projects and open source accelerate growth.</div>
+            <ul class="links">
+              <li><a class="link" href="https://github.com/" target="_blank">GitHub — Find OSS projects to contribute</a></li>
+              <li><a class="link" href="https://dev.to/" target="_blank">Dev.to — Write technical posts</a></li>
+            </ul>
+          </details>
+
+        </section>
+
+        <footer>Tip: use this page as a checklist — complete one node, build a project that uses it, then move to the next.</footer>
+      </main>
+
+      <aside class="card aside">
+        <h3>Quick filters</h3>
+        <div class="pill">HTML &amp; CSS</div>
+        <div class="pill">React &amp; Next</div>
+        <div class="pill">Backend</div>
+        <div class="pill">Cloud</div>
+        <div class="pill">DSA</div>
+
+        <h3 style="margin-top:16px">Start here</h3>
+        <p class="node-desc">If you want a guided path: complete the freeCodeCamp Responsive Web Design course, then follow MDN's HTML &amp; CSS tutorials before building projects.</p>
+
+        <h3 style="margin-top:16px">Made for</h3>
+        <p class="node-desc">This single page roadmap is made to turn MERN familiarity into engineering readiness — focusing on practical, production skills.</p>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
